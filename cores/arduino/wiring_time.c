@@ -18,6 +18,12 @@
 
 #include "Arduino.h"
 
+/* ch32fun.h は直接インクルードできない(VECTOR_HANDLER_SECTION等の依存)。
+   DelaySysTick だけ extern 宣言して使う。
+   48MHz HCLK, FUNCONF_SYSTICK_USE_HCLK=1 → 48000 ticks/ms */
+extern void DelaySysTick(uint32_t n);
+#define DELAY_MS_TICKS 48000u
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -37,10 +43,7 @@ uint32_t micros(void)
 void delay(uint32_t ms)
 {
   if (ms != 0) {
-    uint32_t start = getCurrentMillis();
-    do {
-      yield();
-    } while (getCurrentMillis() - start < ms);
+    DelaySysTick(ms * DELAY_MS_TICKS);
   }
 }
 

@@ -49,11 +49,13 @@ void uiapusb_begin(void)
 
 int uiapusb_available(void)
 {
+    poll_input();
     return rb_count();
 }
 
 int uiapusb_read(uint8_t *buf, int maxlen)
 {
+    poll_input();
     int n = 0;
     while (n < maxlen && rx_tail != rx_head)
     {
