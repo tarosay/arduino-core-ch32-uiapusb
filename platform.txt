@@ -19,7 +19,7 @@ compiler.warning_flags.more=-Wall
 compiler.warning_flags.all=-Wall -Wextra
 
 #---compiler.cmd
-compiler.path={runtime.tools.xpack-riscv-none-elf-gcc-14.2.0-2.path}/bin/
+compiler.path={runtime.tools.xpack-riscv-none-elf-gcc.path}/bin/
 
 compiler.S.cmd=riscv-none-elf-gcc
 compiler.c.cmd=riscv-none-elf-gcc
