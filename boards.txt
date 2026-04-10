@@ -1,0 +1,181 @@
+# See: https://arduino.github.io/arduino-cli/latest/platform-specification/
+
+menu.pnum=Board Version Select
+menu.clock=Clock Select
+menu.xserial=U(S)ART support
+menu.usb=USB support (if available)
+menu.xusb=USB speed (if available)
+menu.virtio=Virtual serial support
+
+menu.opt=Optimize
+menu.dbg=Debug symbols and core logs
+menu.rtlib=C Runtime Library
+menu.upload_method=Upload method
+
+
+
+##############################################################################
+##CH32V003 Board   
+
+CH32V00x_EVT.name=Pro Micro CH32V003 (UIAPUSB)
+CH32V00x_EVT.build.core=arduino
+CH32V00x_EVT.build.board=CH32V00x_EVT
+CH32V00x_EVT.upload.maximum_size=0
+CH32V00x_EVT.upload.maximum_data_size=0
+CH32V00x_EVT.build.variant_h=variant_{build.board}.h
+CH32V00x_EVT.build.ldscript=generated_ch32fun.ld
+CH32V00x_EVT.debug.tool=gdb-WCH_LinkE
+
+
+#Board version 1.4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4=V1.4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.node=NODE_V003F4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.upload.maximum_size=16384
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.upload.maximum_data_size=2048
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.mcu=QingKe-V2A
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.board=CH32V003F4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.series=CH32V00x
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.variant=CH32V00x/CH32V003F4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.chip=CH32V003F4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.extra_flags=-DCH32V003
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.march=rv32ec
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.mabi=ilp32e
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.math_lib_gcc=-lm
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.IQ_math_RV32=
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT4.build.ch_extra_lib=
+
+#Board version 1.3
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3=V1.3
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.node=NODE_V003F4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.upload.maximum_size=16384
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.upload.maximum_data_size=2048
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.mcu=QingKe-V2A
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.board=CH32V003F4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.series=CH32V00x
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.variant=CH32V00x/CH32V003F4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.chip=CH32V003F4
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.extra_flags=-DCH32V003
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.march=rv32ec
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.mabi=ilp32e
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.math_lib_gcc=-lm
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.IQ_math_RV32=
+CH32V00x_EVT.menu.pnum.CH32V003V1DOT3.build.ch_extra_lib=
+
+
+# Upload menu
+CH32V00x_EVT.menu.upload_method.minichlink=minichlink
+CH32V00x_EVT.menu.upload_method.minichlink.upload.protocol=
+CH32V00x_EVT.menu.upload_method.minichlink.upload.options=
+CH32V00x_EVT.menu.upload_method.minichlink.upload.tool=minichlink
+CH32V00x_EVT.menu.upload_method.swdMethod=WCH-SWD
+CH32V00x_EVT.menu.upload_method.swdMethod.upload.protocol=
+CH32V00x_EVT.menu.upload_method.swdMethod.upload.options=
+CH32V00x_EVT.menu.upload_method.swdMethod.upload.tool=WCH_linkE
+CH32V00x_EVT.menu.upload_method.ispMethod=WCH-ISP
+CH32V00x_EVT.menu.upload_method.ispMethod.upload.protocol=
+CH32V00x_EVT.menu.upload_method.ispMethod.upload.options=
+CH32V00x_EVT.menu.upload_method.ispMethod.upload.tool=wchisp
+
+
+# Clock Select
+CH32V00x_EVT.menu.clock.48MHz_HSI=48MHz Internal
+CH32V00x_EVT.menu.clock.48MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_48MHz_HSI=48000000 -DF_CPU=48000000
+CH32V00x_EVT.menu.clock.24MHz_HSI=24MHz Internal
+CH32V00x_EVT.menu.clock.24MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_24MHz_HSI=24000000 -DF_CPU=24000000
+CH32V00x_EVT.menu.clock.8MHz_HSI=8MHz Internal
+CH32V00x_EVT.menu.clock.8MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_8MHz_HSI=8000000 -DF_CPU=8000000
+CH32V00x_EVT.menu.clock.48MHz_HSE=48MHz External
+CH32V00x_EVT.menu.clock.48MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_48MHz_HSE=48000000 -DF_CPU=48000000
+CH32V00x_EVT.menu.clock.24MHz_HSE=24MHz External
+CH32V00x_EVT.menu.clock.24MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_24MHz_HSE=24000000 -DF_CPU=24000000
+CH32V00x_EVT.menu.clock.8MHz_HSE=8MHz External
+CH32V00x_EVT.menu.clock.8MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_8MHz_HSE=8000000 -DF_CPU=8000000
+
+
+# Optimizations
+CH32V00x_EVT.menu.opt.osstd=Smallest (-Os default)
+CH32V00x_EVT.menu.opt.osstd.build.flags.optimize=-Os
+CH32V00x_EVT.menu.opt.oslto=Smallest (-Os) with LTO
+CH32V00x_EVT.menu.opt.oslto.build.flags.optimize=-Os -flto
+CH32V00x_EVT.menu.opt.o1std=Fast (-O1)
+CH32V00x_EVT.menu.opt.o1std.build.flags.optimize=-O1
+CH32V00x_EVT.menu.opt.o1lto=Fast (-O1) with LTO
+CH32V00x_EVT.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+CH32V00x_EVT.menu.opt.o2std=Faster (-O2)
+CH32V00x_EVT.menu.opt.o2std.build.flags.optimize=-O2
+CH32V00x_EVT.menu.opt.o2lto=Faster (-O2) with LTO
+CH32V00x_EVT.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+CH32V00x_EVT.menu.opt.o3std=Fastest (-O3)
+CH32V00x_EVT.menu.opt.o3std.build.flags.optimize=-O3
+CH32V00x_EVT.menu.opt.o3lto=Fastest (-O3) with LTO
+CH32V00x_EVT.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+CH32V00x_EVT.menu.opt.ogstd=Debug (-Og)
+CH32V00x_EVT.menu.opt.ogstd.build.flags.optimize=-Og
+CH32V00x_EVT.menu.opt.o0std=No Optimization (-O0)
+CH32V00x_EVT.menu.opt.o0std.build.flags.optimize=-O0
+
+
+# Debug information
+CH32V00x_EVT.menu.dbg.none=None
+CH32V00x_EVT.menu.dbg.none.build.flags.debug=-DNDEBUG
+CH32V00x_EVT.menu.dbg.enable_sym=Symbols Enabled (-g)
+CH32V00x_EVT.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
+CH32V00x_EVT.menu.dbg.enable_log=Core logs Enabled
+CH32V00x_EVT.menu.dbg.enable_log.build.flags.debug=
+CH32V00x_EVT.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
+CH32V00x_EVT.menu.dbg.enable_all.build.flags.debug=-g
+
+
+# C Runtime Library
+CH32V00x_EVT.menu.rtlib.none=None (ch32fun)
+CH32V00x_EVT.menu.rtlib.none.build.flags.ldflags=
+CH32V00x_EVT.menu.rtlib.nano=Newlib Nano
+CH32V00x_EVT.menu.rtlib.nano.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs
+CH32V00x_EVT.menu.rtlib.nanofp=Newlib Nano + Float Printf
+CH32V00x_EVT.menu.rtlib.nanofp.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs -u _printf_float
+CH32V00x_EVT.menu.rtlib.nanofs=Newlib Nano + Float Scanf
+CH32V00x_EVT.menu.rtlib.nanofs.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs -u _scanf_float
+CH32V00x_EVT.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
+CH32V00x_EVT.menu.rtlib.nanofps.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs -u _printf_float -u _scanf_float
+CH32V00x_EVT.menu.rtlib.full=Newlib Standard
+CH32V00x_EVT.menu.rtlib.full.build.flags.ldflags=--specs=nosys.specs
+
+uiapusb_min.name=UIAPduino Minimal USB
+
+uiapusb_min.upload.tool=minichlink
+uiapusb_min.upload.maximum_size=16384
+uiapusb_min.upload.maximum_data_size=2048
+
+uiapusb_min.build.board=CH32V003F4
+uiapusb_min.build.march=rv32ec
+uiapusb_min.build.mabi=ilp32e
+uiapusb_min.build.f_cpu=48000000L
+uiapusb_min.build.core=uiapusb_min
+uiapusb_min.build.variant=uiapusb_min
+uiapusb_min.build.variant_h=variant_CH32V003F4.h
+uiapusb_min.build.series=CH32V00x
+uiapusb_min.build.chip=CH32V003F4
+uiapusb_min.build.extra_flags=-DCH32V003
+uiapusb_min.build.flags.clock=-DSYSCLK_FREQ_48MHz_HSI=48000000 -DF_CPU=48000000
+uiapusb_min.build.flags.optimize=-Os
+uiapusb_min.build.flags.debug=-DNDEBUG -w
+uiapusb_min.build.flags.ldflags=
+uiapusb_min.build.ch_extra_lib=
+uiapusb_min.build.usb_flags=
+uiapusb_min.build.bootloader_flags=
+uiapusb_min.compiler.c.extra_flags=
+uiapusb_min.compiler.cpp.extra_flags=
+uiapusb_min.compiler.S.extra_flags=
+uiapusb_min.compiler.ar.extra_flags=
+uiapusb_min.compiler.elf2bin.extra_flags=
+uiapusb_min.compiler.elf2hex.extra_flags=
+uiapusb_min.compiler.elf2lst.extra_flags=
+uiapusb_min.upload.tool=minichlink
+uiapusb_min.upload.tool.windows=minichlink
+uiapusb_min.upload.protocol=minichlink
+uiapusb_min.upload.tool=minichlink
+uiapusb_min.upload.tool.windows=minichlink
+uiapusb_min.upload.protocol=minichlink
+uiapusb_min.upload.maximum_size=16384
+uiapusb_min.upload.maximum_data_size=2048
+uiapusb_min.build.ldscript=generated_ch32fun.ld
