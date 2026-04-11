@@ -62,4 +62,8 @@ void yield(void);
 #include "pins_arduino.h"
 #include "uiapusb.h"
 
+#ifdef __cplusplus
+#include "HIDuiap.h"
+#endif
+
 #endif // Arduino_h
